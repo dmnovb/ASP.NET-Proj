@@ -8,7 +8,7 @@
 
         public Joke()
         {
-            string a = "asdf";
+            //string a = "asdf";
         }
     }
 }
