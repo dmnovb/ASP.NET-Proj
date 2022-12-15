@@ -65,22 +65,8 @@ namespace JokesWebApp.Controllers
             return View(joke);
         }
 
-        // GET: Jokes/Edit/5
-        public async Task<IActionResult> bobi(int? id)
-        {
-            if (id == null || _context.Joke == null)
-            {
-                return NotFound();
-            }
-
-            var joke = await _context.Joke.FindAsync(id);
-            if (joke == null)
-            {
-                return NotFound();
-            }
-            return View(joke);
-        }
-        //public async Task<IActionResult> Edit(int? id)
+         //GET: Jokes/Edit/5
+        //public async Task<IActionResult> bobi(int? id)
         //{
         //    if (id == null || _context.Joke == null)
         //    {
@@ -94,6 +80,20 @@ namespace JokesWebApp.Controllers
         //    }
         //    return View(joke);
         //}
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null || _context.Joke == null)
+            {
+                return NotFound();
+            }
+
+            var joke = await _context.Joke.FindAsync(id);
+            if (joke == null)
+            {
+                return NotFound();
+            }
+            return View(joke);
+        }
 
         // POST: Jokes/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
