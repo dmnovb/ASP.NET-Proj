@@ -66,20 +66,6 @@ namespace JokesWebApp.Controllers
         }
 
          //GET: Jokes/Edit/5
-        //public async Task<IActionResult> bobi(int? id)
-        //{
-        //    if (id == null || _context.Joke == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    var joke = await _context.Joke.FindAsync(id);
-        //    if (joke == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    return View(joke);
-        //}
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Joke == null)
